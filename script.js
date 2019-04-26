@@ -34,22 +34,33 @@ function crossDoneItem() {
 	this.classList.toggle("done");
 }
 
+
 let initial = ["Notebook", "Jello", "Spinach", "Rice", "Birthday Cake", "Candles"];
 
 for (i=0; i < 6; i++) {
 	let li = document.createElement("li");
-	li.appendChild(document.createTextNode(initial[i]));
+	let but = document.createElement("button");
+	// but.setAttribute('class', 'btn'); -> for class
+	// but.value = 'Delete'; -> doesn't work for value
+	but.innerHTML = 'Delete';
+	li.appendChild(document.createTextNode(initial[i] + " "));
+	li.appendChild(but);
+	but.addEventListener("click", () => li.remove());
+	// Remove this line. Can't use this.remove() cuz this here means 'but'. Can't use callback func here cuz li only defined in this for loop.
 	li.addEventListener("click", crossDoneItem);
 	// li.addEventListener("click", () => li.classList.toggle("done"));
+	// Crossover done item.
 	ul.appendChild(li);
 }
 
-// line.addEventListener('click', function () {
-//                 this.classList.toggle('done')
 
 function createListElement() {
 		let li = document.createElement("li");
-		li.appendChild(document.createTextNode(input.value));
+		let but = document.createElement("button");
+		but.innerHTML = 'Delete';
+		li.appendChild(document.createTextNode(input.value + " "));
+		li.appendChild(but);
+		but.addEventListener("click", () => li.remove());
 		li.addEventListener("click", crossDoneItem);
 		ul.appendChild(li);
 		input.value = "";
