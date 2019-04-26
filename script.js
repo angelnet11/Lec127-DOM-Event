@@ -40,6 +40,7 @@ let initial = ["Notebook", "Jello", "Spinach", "Rice", "Birthday Cake", "Candles
 for (i=0; i < 6; i++) {
 	let li = document.createElement("li");
 	let but = document.createElement("button");
+	but.classList.add("delBtn");
 	// but.setAttribute('class', 'btn'); -> for class
 	// but.value = 'Delete'; -> doesn't work for value
 	but.innerHTML = 'Delete';

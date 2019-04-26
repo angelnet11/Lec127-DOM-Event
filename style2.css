@@ -5,9 +5,9 @@
 	transform: skewY(-9deg);
 	letter-spacing: 2px;
 	word-spacing: -8px;
-	color: tomato;
+	color: #00CCCC;
 	text-shadow:
-		-1px -1px 0 firebrick,
+	/*	-1px -1px 0 firebrick,
 		-2px -2px 0 firebrick,
 		-3px -3px 0 firebrick,
 		-4px -4px 0 firebrick,
@@ -15,7 +15,8 @@
 		-6px -6px 0 firebrick,
 		-7px -7px 0 firebrick,
 		-8px -8px 0 firebrick,
-		-30px 20px 40px dimgery;
+		-30px 20px 40px dimgery;*/
+		2px 2px 4px #000000;
 }
 
 .done {
@@ -44,7 +45,7 @@
 
 #enter {
 	color: white;
-	background-color: tomato;
+	background-color: #00CCCC;
   	font-size: 16px;
   	width: 100px;
   	height: 30px;
@@ -66,6 +67,6 @@
   	text-transform: uppercase;
 	border-radius: 4px;
   	color: white;
-  	background-color: tomato;
+  	background-color: #00CCCC;
   	opacity: .4;
 }
